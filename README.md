@@ -1,4 +1,3 @@
-
 # FW - Simple Firewall Tool
 
 FW is a simple firewall command-line tool written in Go, designed to control the Windows firewall using the `netsh` command. This tool allows you to enable or disable the firewall, allow or deny traffic on specific ports, and list firewall rules in a simplified manner (Program Name, Port, Direction).
@@ -15,6 +14,7 @@ FW is a simple firewall command-line tool written in Go, designed to control the
 ### Running the FW Tool
 
 You can run FW in different modes:
+
 1. **Enable/Disable Firewall**: Control the state of the Windows firewall.
 2. **Allow/Deny Ports**: Add rules to allow or block traffic on specific ports.
 3. **List Rules**: List the current firewall rules in a simplified format.
@@ -37,7 +37,7 @@ You can run FW in different modes:
 To enable the firewall on all profiles:
 
 ```bash
-go run main.go enable
+fw enable
 ```
 
 #### 2. Disabling the Firewall
@@ -45,7 +45,7 @@ go run main.go enable
 To disable the firewall on all profiles:
 
 ```bash
-go run main.go disable
+fw disable
 ```
 
 #### 3. Allowing Traffic on a Port
@@ -53,13 +53,13 @@ go run main.go disable
 To allow inbound traffic on port `8080`:
 
 ```bash
-go run main.go allow 8080
+fw allow 8080
 ```
 
 To allow outbound traffic on port `8080`:
 
 ```bash
-go run main.go allow 8080 out
+fw allow 8080 out
 ```
 
 #### 4. Denying Traffic on a Port
@@ -67,7 +67,7 @@ go run main.go allow 8080 out
 To block inbound traffic on port `22`:
 
 ```bash
-go run main.go deny 22
+fw deny 22
 ```
 
 #### 5. Deleting a Port Rule
@@ -75,7 +75,7 @@ go run main.go deny 22
 To delete a firewall rule for port `8080`:
 
 ```bash
-go run main.go delete 8080
+fw delete 8080
 ```
 
 #### 6. Listing Firewall Rules
@@ -83,7 +83,7 @@ go run main.go delete 8080
 To list the current firewall rules (showing Program Name, Port, and Direction):
 
 ```bash
-go run main.go list
+fw list
 ```
 
 #### 7. Firewall Status
@@ -91,13 +91,13 @@ go run main.go list
 To check the current firewall status:
 
 ```bash
-go run main.go status
+fw status
 ```
 
 ### Usage Example
 
 ```bash
-$ go run main.go list
+$ fw list
 Port        Direction        Program Name
 8080        Inbound          AllowInboundPort8080
 80          Inbound          AllowInboundPort80
