@@ -1,4 +1,14 @@
-# FW - Simple Firewall Tool
+<div align="center">
+  <h1> FW </h1>
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/marcuwynu23/fw.svg" alt="Stars Badge"/>
+  <img src="https://img.shields.io/github/forks/marcuwynu23/fw.svg" alt="Forks Badge"/>
+  <img src="https://img.shields.io/github/issues/marcuwynu23/fw.svg" alt="Issues Badge"/>
+  <img src="https://img.shields.io/github/license/marcuwynu23/fw.svg" alt="License Badge"/>
+</p>
+
 
 FW is a simple firewall command-line tool written in Go, designed to control the Windows firewall using the `netsh` command. This tool allows you to enable or disable the firewall, allow or deny traffic on specific ports, and list firewall rules in a simplified manner (Program Name, Port, Direction).
 
